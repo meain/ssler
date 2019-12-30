@@ -3,7 +3,12 @@
 
 Easily test with SSL in your localhost.
 
-> Might be a bit slow for now
+*Might be a bit slow for now*
+
+
+```
+pip install ssler
+```
 
 ### Usage
 
