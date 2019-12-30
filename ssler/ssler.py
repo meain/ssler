@@ -1,8 +1,10 @@
+import os
 import sys
 from flask import Flask, request, Response
 import requests
 
 
+os.environ['WERKZEUG_RUN_MAIN'] = 'true'
 redirect_addr = 'localhost:8080'
 run_port = 8800
 
@@ -12,7 +14,7 @@ def help():
 Easily redirect your localhost server though an a server with self signed certificate
 
 usage: ssler '<domain>' '<ssler_port(optional)>'
-examples: 
+examples:
     - ssler 'localhost:8080'
     - ssler 'http://33.22.22.88'
     - ssler 'localhost:8080' 8888''')
@@ -48,7 +50,6 @@ def index():
 
 @app.route("/<path:path>", methods=["GET", "POST", "DELETE"])
 def proxy(path):
-    print("path:", path)
     global SITE_NAME
     if request.method == "GET":
         resp = requests.get(f"{SITE_NAME}/{path}", headers=request.headers)

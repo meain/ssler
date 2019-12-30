@@ -3,6 +3,8 @@
 
 Easily test with SSL in your localhost.
 
+> Might be a bit slow for now
+
 ### Usage
 
 - Run your server as normal
