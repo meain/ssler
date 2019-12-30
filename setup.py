@@ -13,7 +13,7 @@ install_requires = ['flask', 'requests']  # any requirements your package has
 
 setuptools.setup(
     name="ssler",
-    version="0.0.1",
+    version="0.0.2",
     author="Abin Simon",
     author_email="abinsimon10@gmail.com",
     description="Easy SSL for your localhost server",

@@ -14,6 +14,7 @@ pip install ssler
 
 - Run your server as normal
 - Call `ssler` with your localhost server address
+- Now use the `ssler` address instead of your server address
 
 ```bash
 ssler
